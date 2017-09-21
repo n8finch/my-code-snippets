@@ -1,0 +1,10 @@
+[post_author_link]
+This function produces the author of the post (link to author URL). Here is a list of attributes for this short code:
+
+nofollow – assign nofollow to the rel attribute in the link to the author. By default is set to FALSE
+before – Text/markup to place before the post author link.
+after – Text/markup to place after the post author link.
+Example:
+
+[post_author_link before="<b>" after="</b>"]
+Output: Brian Gardner

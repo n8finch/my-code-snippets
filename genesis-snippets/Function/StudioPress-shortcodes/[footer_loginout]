@@ -1,0 +1,10 @@
+[footer_loginout]
+This function produces the log in/out link. Here is a list of attributes for this short code:
+
+redirect – set redirect to a URL on login.
+before – Text/markup to place before the log in/out link.
+after – Text/markup to place after the log in/out link.
+Example:
+
+[footer_loginout redirect="http://www.studiopress.com/features/genesis"]
+Output: Log out

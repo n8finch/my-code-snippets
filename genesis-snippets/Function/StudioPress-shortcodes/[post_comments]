@@ -1,0 +1,16 @@
+[post_comments]
+This function produces the comment link. Here is a list of attributes for this short code:
+
+zero – Text to display if zero comments on the post
+one – Text to display if one comment on the post
+more – Text to display if more than one comment on the post
+hide_if_off – Enable the comment link even if comments are off.
+before – Text/markup to place before the post comment link.
+after – Text/markup to place after the post comment link.
+Example:
+
+[post_comments zero="No Comments" one="1 Comment" more="% Comments" hide_if_off="disabled"]
+Output:
+No Comments: No Comments
+1 Comment: 1 Comment
+Multiple Comments: 7 Comments

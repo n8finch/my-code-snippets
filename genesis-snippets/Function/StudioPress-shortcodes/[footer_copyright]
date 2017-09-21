@@ -1,0 +1,11 @@
+[footer_copyright]
+This function produces the copyright. Here is a list of attributes for this short code:
+
+copyright – Default: ©
+first- Text/markup to place between the copyright symbol and the copyright date.
+before – Text/markup to place before the copyright.
+after – Text/markup to place after the copyright.
+Example:
+
+[footer_copyright first="2005"]
+Output: © 2005–2016

@@ -1,0 +1,13 @@
+[post_time]
+This function produces the time of post publication. Here is a list of attributes for this short code:
+
+format – The format for the time. Defaults to the time format configured in your WordPress options.
+before – Text/markup to place before the post time.
+after – Text/markup to place after the post time.
+label – Text to place before the post time.
+Example:
+
+[post_time format="g:i a"]
+Output: 12:01 pm
+
+Note: More information on formatting date and time can be found here: https://codex.wordpress.org/Formatting_Date_and_Time

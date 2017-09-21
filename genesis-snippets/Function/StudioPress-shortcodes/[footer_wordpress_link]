@@ -1,0 +1,9 @@
+[footer_wordpress_link]
+This function produces the WordPress link. Here is a list of attributes for this short code:
+
+before – Text/markup to place before the WordPress link.
+after – Text/markup to place after the WordPress link.
+Example:
+
+[footer_wordpress_link]
+Output: WordPress

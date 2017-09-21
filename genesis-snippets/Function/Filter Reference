@@ -1,0 +1,286 @@
+Filter Reference
+
+Below is a list of filters that have been built into the Genesis Framework:
+
+Comments Section Filters
+genesis_title_comments
+Default value: __(‘<h3>Comments</h3>’, ‘genesis’)
+Applied to the comments title text as well as heading tags in the genesis_do_comments function.
+
+genesis_no_comments_text
+Default value: (empty)
+Applied to the no comments text if commenting is enabled but there are no comments so far in the genesis_do_comments function.
+
+genesis_comments_closed_text
+Default value: (empty)
+Applied to the closed comment text if commenting is disabled in the genesis_do_comments function.
+
+genesis_title_pings
+Default value: __(‘<h3>Trackbacks</h3>’, ‘genesis’)
+Applied to the trackbacks title text as well as heading tags in the genesis_do_pings function.
+
+genesis_no_pings_text
+Default value: (empty)
+Applied to the no pings text if ping is enabled but there are no trackbacks so far in the genesis_do_pings function.
+
+genesis_comment_list_args
+Default value: $args
+Applied to the arguments used in wp_list_comments in the genesis_default_list_comments function.
+
+genesis_ping_list_args
+Default value: $args
+Applied to the arguments used in wp_list_comments in the genesis_default_list_pings function.
+
+comment_author_says_text
+Default value: __(‘says’, ‘genesis’)
+Applied to the comment author “says” text in the genesis_comment_callback function.
+
+genesis_comment_form_args
+Default value: $args, $user_identity, $id, $commenter, $req, $aria_req
+Applied to the arguments used in comment_form in the genesis_do_comment_form function.
+
+Footer Section Filters
+genesis_footer_backtotop_text
+Default value: [footer_backtotop]
+Applied to the back to top text in the genesis_do_footer function.
+
+genesis_footer_creds_text
+Default value: __(‘Copyright’, ‘genesis’) . ‘ [footer_copyright] [footer_childtheme_link] &middot; [footer_genesis_link] [footer_studiopress_link] &middot; [footer_wordpress_link] &middot; [footer_loginout]‘
+Applied to the credits text in the genesis_do_footer function.
+
+genesis_footer_output
+Default value: $output, $backtotop_text, $creds_text
+Applied to final output of genesis_do_footer including the back to top and credits text as well as div structure.
+
+genesis_footer_scripts
+Default value: genesis_option(‘footer_scripts’)
+Applied to the output of the footer scripts.
+
+Header Section Filters
+genesis_seo_title
+Default value: $title, $inside, $wrap
+Applied to the output of the genesis_seo_site_title function which depending on the SEO option set by the user will either wrap the title in <h1> or <p> tags.
+
+genesis_seo_description
+Default value: $description, $inside, $wrap
+Applied to the output of the genesis_seo_site_description function which depending on the SEO option set by the user will either wrap the description in <h1> or <p> tags.
+
+genesis_pre_load_favicon
+Default value: false
+
+genesis_header_scripts
+Default value: genesis_get_option(‘header_scripts’)
+Applied to the output of the header scripts.
+
+Loop Filters
+genesis_custom_loop_args
+Default value: wp_parse_args($args, $defaults), $args, $defaults
+Applied to the arguments for use in WP_Query in the genesis_custom_loop function.
+
+genesis_post_title_text
+Default value: get_the_title()
+Applied to the title in the genesis_do_post_title function.
+
+genesis_post_title_output
+Default value: $title
+Applied to the output of the title and wrapping heading tags in the genesis_do_post_title function.
+
+genesis_noposts_text
+Default value: __(‘Sorry, no posts matched your criteria.’, ‘genesis’)
+Applied to the no post text which is returned when a query is made with no results in the genesis_do_noposts function.
+
+genesis_post_info
+Default value: $post_info
+Applied to the post info outputted by the genesis_post_info function.
+
+genesis_post_meta
+Default value: $post_meta
+Applied to the post meta outputted by the genesis_post_meta function.
+
+genesis_author_box_gravatar_size
+Default value: 70
+Applied to the author box gravatar image size in the genesis_author_box function.
+
+genesis_author_box_title
+Default value: sprintf( ‘<strong>%s %s</strong>’, __(‘About’, ‘genesis’), get_the_author() )
+Applied to the author box title in the genesis_author_box function.
+
+Search Form Filters
+the_search_query
+Default value: get_search_query()
+Applied to the search query in the genesis_search_form function.
+
+genesis_search_text
+Default value: esc_attr__(‘Search this website…’, ‘genesis’)
+Applied to the search field text in the genesis_search_form function.
+
+genesis_search_button_text
+Default value: esc_attr__( ‘Search’, ‘genesis’ )
+Applied to the search form button text in the genesis_search_form function.
+
+genesis_search_form
+Default value: $form, $search_text, $button_text
+Applied to the final output search form in the genesis_search_form function.
+
+Misc. Filters
+genesis_breadcrumb_args
+Default value: $args
+Applied to the breadcrumb arguments in the genesis_breadcrumb function.
+
+genesis_breadcrumb_homelink
+Default value: $homelink
+Applied to the breadcrumb home link in the genesis_breadcrumb function.
+
+genesis_breadcrumb_bloglink
+Default value: $bloglink
+Applied to the breadcrumb blog link in the genesis_breadcrumb function.
+
+genesis_gravatar_sizes
+Default value: $sizes
+Applied to the sizes Small, Medium, Large, Extra Large in the Genesis User Profile Widget.
+
+Image Filters
+genesis_get_image_default_args
+Default value: $defaults
+applied to the default arguments added to genesis_get_image function.
+
+genesis_pre_get_image
+Default value: false, $args, $post
+Allows child theme to short-circuit the genesis_get_image function
+
+genesis_get_image
+Default value: $output, $args, $id, $html, $url, $src
+
+Menu Filters
+genesis_nav_default_args
+Default value: $defaults
+applied to the default arguments added to genesis_nav function.
+genesis_pre_nav
+Default value: false, $args
+Allows child theme to short-circuit the genesis_nav function
+
+genesis_nav_home_text
+Default value: __(‘Home’, ‘genesis’), $args
+Applied to the Home text in the genesis_nav function.
+
+genesis_nav_items
+Default value: $menu, $args
+Applied to the nav items in the genesis_nav function
+
+genesis_nav
+Default value: $menu, $args
+Applied to the final nav output in the genesis_nav function
+
+Option Filters
+genesis_pre_get_option_
+Default value: $key, false, $setting
+Allows child theme to short-circuit the genesis_get_option function
+
+genesis_options
+Default value: $settings_cache[$setting], $setting
+
+genesis_get_option function
+Default value: get_option($setting), $setting
+
+Footer Shortcode Filters
+genesis_footer_backtotop_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the back to top shortcode.
+
+genesis_footer_copyright_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the copyright shortcode.
+
+genesis_footer_childtheme_link_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the child theme link shortcode.
+
+genesis_footer_genesis_link_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the Genesis Link shortcode.
+
+genesis_footer_studiopress_link_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the StudioPress link shortcode.
+
+genesis_footer_wordpress_link_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the WordPress link shortcode.
+
+genesis_footer_loginout_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the log in/out shortcode.
+
+Post Shortcode Filters
+genesis_post_date_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the date shortcode.
+
+genesis_post_time_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the time shortcode.
+
+genesis_post_author_link_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the author link shortcode.
+
+genesis_post_author_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the author shortcode.
+
+genesis_post_comments_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the post comments shortcode.
+
+genesis_post_tags_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the post tags shortcode.
+
+genesis_post_categories_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the post categories shortcode.
+
+genesis_post_edit_shortcode
+Default value: $output, $atts
+applied to the default atts and output for the post edit shortcode.
+
+Init Filters
+genesis_settings_field
+Default value: genesis-settings
+Applied to the defined Settings Field Constants (for DB storage for genesis settings).
+
+genesis_seo_settings_field
+Default value: genesis-seo-settings
+Applied to the defined Settings Field Constants (for DB storage for genesis SEO settings).
+
+genesis_formatting_allowedtags
+Default value:
+
+array(
+    //  <p>, <span>, <div>
+    'p' => array( 'align' => array(), 'class' => array(), 'style' => array() ),
+    'span' => array( 'align' => array(), 'class' => array(), 'style' => array() ),
+    'div' => array( 'align' => array(), 'class' => array(), 'style' => array() ),
+
+    //  <a href="" title="">Text</a>
+    'a' => array( 'href' => array(), 'title' => array() ),
+
+    //  <b>, </i>, <em>, <strong>
+    'b' => array(), 'strong' => array(),
+    'i' => array(), 'em' => array(),
+
+    //  <blockquote>, <br />
+    'blockquote' => array(),
+    'br' => array()
+) );
+Applied to allowed formatting tags, used by wp_kses().
+
+SEO Settings Filter
+genesis_seo_settings_defaults
+Default value: $defaults
+applied to the default values for Genesis SEO Settings called in the genesis_seo_settings_defaults function.
+
+Theme Settings Filter
+genesis_theme_settings_defaults
+Default value: $defaults
+applied to the default values for Genesis theme settings called in the genesis_theme_settings_defaults function.

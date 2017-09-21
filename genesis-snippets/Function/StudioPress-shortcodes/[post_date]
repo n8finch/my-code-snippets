@@ -1,0 +1,11 @@
+[post_date]
+This function produces the date of post publication. Here is a list of attributes for this short code:
+
+format – The format for the date. Defaults to the date format configured in your WordPress options.
+before – Text/markup to place before the post date.
+after – Text/markup to place after the post date.
+label – Text to place before the post date.
+Example:
+
+[post_date format="F j, Y" label="Dated: "]
+Output: Dated: November 12, 2012

@@ -1,0 +1,43 @@
+/* Grid
+---------------------------------------------------------------------------------------------------- */
+
+
+/* 1) Set grid max width */
+
+.grid-overlay .wrap {
+	max-width: 1380px;
+}
+
+/* 2) Set size of column and gutter */
+
+.grid-overlay .gutter {
+	width: 1.449275362%; /* 20/1380 */
+}
+
+.grid-overlay .col {
+	width: 4.710144928%; /* 65/1380 */
+}
+
+
+
+/* Additional Styles */
+.grid-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+}
+
+.grid-overlay .wrap {
+	margin: 0 auto;
+	border-right: 1px solid #f00;
+	padding: 0;
+}
+
+.grid-overlay .wrap > div {
+	border-left: 1px solid #f00;
+	height: 100vh;
+	float: left;
+}

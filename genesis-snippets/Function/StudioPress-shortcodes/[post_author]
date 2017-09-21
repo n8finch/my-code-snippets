@@ -1,0 +1,9 @@
+[post_author]
+This function produces the author of the post (display name). Here is a list of attributes for this short code:
+
+before – Text/markup to place before the post author name.
+after – Text/markup to place after the post author name.
+Example:
+
+[post_author before="<em>" after="</em>"]
+Output: Brian Gardner

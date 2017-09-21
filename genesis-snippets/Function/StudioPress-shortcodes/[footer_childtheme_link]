@@ -1,0 +1,10 @@
+[footer_childtheme_link]
+This function produces the child theme link. Here is a list of attributes for this short code:
+
+before – Text/markup to place before the childtheme link. Default: &middot
+after – Text/markup to place after the childtheme link.
+Example:
+
+[footer_childtheme_link before ="&middot;"]
+Output: · Prose Theme
+Note: Must be supported by Child Theme

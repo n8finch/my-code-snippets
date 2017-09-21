@@ -1,0 +1,9 @@
+[footer_genesis_link]
+This function produces the genesis theme link. Here is a list of attributes for this short code:
+
+before – Text/markup to place before the genesis theme link.
+after – Text/markup to place after the genesis theme link.
+Example:
+
+[footer_genesis_link]
+Output: Genesis Framework

@@ -1,0 +1,9 @@
+[footer_studiopress_link]
+This function produces the StudioPress link. Here is a list of attributes for this short code:
+
+before – Text/markup to place before the StudioPress link. Default: “by”
+after – Text/markup to place after the StudioPress link.
+Example:
+
+[footer_studiopress_link]
+Output: by StudioPress

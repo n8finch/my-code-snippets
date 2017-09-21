@@ -1,0 +1,7 @@
+[post_terms]
+This function produces a list of terms associated with the post from the specified taxonomy. Here is a list of attributes for this short code:
+
+sep – Separator between the terms.
+before – Text/markup to place before the post terms list. Default “Filed Under: “
+after – Text/markup to place after the terms list.
+taxonomy – Which taxonomy to use. Default “category”

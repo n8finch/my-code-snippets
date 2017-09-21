@@ -1,0 +1,10 @@
+[post_edit]
+This function produces the edit post link for logged in users. Here is a list of attributes for this short code:
+
+link – Text for edit link. Default “(Edit)”
+before – Text/markup to place before the edit post link. Default “Filed Under: “
+after – Text/markup to place after the edit post link.
+Example:
+
+[post_edit  before="<b>" after="</b>"]
+Output: A link to the edit post/page screen for that post will be displayed only for logged in users with a role that permits editing.

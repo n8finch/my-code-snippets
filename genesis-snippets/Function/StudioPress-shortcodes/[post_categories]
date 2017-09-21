@@ -1,0 +1,10 @@
+[post_categories]
+This function produces the category link list. Here is a list of attributes for this short code:
+
+sep – Separator between post categories
+before – Text/markup to place before the post category list. Default “Filed Under: “
+after – Text/markup to place after the post category list.
+Example:
+
+[post_categories sep=", " before="Posted Under: "]
+Output: Posted Under: Category #1

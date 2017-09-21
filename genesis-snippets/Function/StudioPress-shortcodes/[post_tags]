@@ -1,0 +1,10 @@
+[post_tags]
+This function produces the tag link list. Here is a list of attributes for this short code:
+
+sep – Separator between post tags
+before – Text/markup to place before the tag list. Default “Tagged With: “
+after – Text/markup to place after the tag list.
+Example:
+
+[post_tags sep=", " before="Tags: "]
+Output: Tags: Tag Name
