@@ -9,15 +9,21 @@ var doPopUp = function( divID ) {
 	var winHeight = window.innerHeight;
 	var winWidth = window.innerWidth;
 	var scrollY = window.scrollY;
+	var popupHeight = 640; //or whatever you want the min-height to be
 	var popupWidth = winWidth*.9;
+	var centeredHeight = winHeight/2 - popupHeight/2;
 	var centeredWidth = winWidth/2 - popupWidth/2;
 
 	if( winWidth > 1000 ) {
 		centeredWidth = winWidth/2 - 450  ;
 	}
 
+	if( winHeight < popupHeight ) {
+		centeredHeight = 0;
+	}
+
 	//* Remove the popup from wherever it was added and append it to the body so it can be full width
-	//* This allows us to keep our popup next to whatever object triggers it, but 
+	//* This allows us to keep our popup next to whatever object triggers it, but
 	$(thePopup).remove();
 	$('body').append(thePopup);
 
@@ -28,7 +34,7 @@ var doPopUp = function( divID ) {
 		'max-width': '900px',
 		'height': 'auto',
 		'position': 'absolute',
-		'top': scrollY + 100,
+		'top': scrollY + centeredHeight,
 		'left': centeredWidth
 	}).append('<span class="popup-close-button">X</span>');
 

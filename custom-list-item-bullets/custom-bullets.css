@@ -1,0 +1,23 @@
+
+/*NOTE: Make sure you only apply this where you want it, hence the soliloquy exception
+*/
+main.content ul {
+	list-style: none;
+    margin-left: 10px;
+    padding-left: 0;
+    text-indent: -12px;
+}
+
+main.content li:before {
+    content: "+";
+    margin-right: 4px;
+}
+
+ul.soliloquy-wrap {
+
+	text-indent: 0;
+
+	li:before {
+		content: none;
+	}
+}
