@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#from Shawn Hooper
+
+wp core download --version=4.5
+wp core config --dbname=$1 --dbuser=root --dbhost=127.0.0.1
+wp db create
+wp core install --skip-email --title="$1" --admin_user="shawn" --admin_password="shawn" --admin_email=shawn@actionable.co --url=http://wcroc.dev/
+wp theme install simone --activate
+wp plugin delete hello
+wp plugin install any-ipsum;
+wp plugin install advanced-custom-fields --version=4.4.0 --activate
+wp plugin install tinymce-advanced --activate
+wp plugin install wordpress-importer --activate
+wp import ~/Downloads/theme-unit-test-data.xml --authors=create
+wp user import-csv ~/www/testusers.csv
