@@ -36,7 +36,7 @@ var doPopUp = function( divID ) {
 		'position': 'absolute',
 		'top': scrollY + centeredHeight,
 		'left': centeredWidth
-	}).append('<span class="popup-close-button">X</span>');
+	}).append('<span class="popup-close-button">&times</span>');
 
 	$('.popup-close-button').on('click', function(e) {
 		hidePopUp(divID);
