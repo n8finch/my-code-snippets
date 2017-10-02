@@ -1,37 +1,44 @@
 #!/bin/bash
 
-#Set the array of folders
-DIRECTORIES=( directories go here );
+#Double-check you're ready to rock and roll with an update
+read -r -p "Are you sure you want to update all specified directories? [y/N] " response
 
-#For each item in array, run the commands
+	if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 
-for dir in ${DIRECTORIES[@]} ; do
+		#Set the array of folders
+		DIRECTORIES=( buddyboss );
 
-  cd ${dir}/public_html;
+		#For each item in array, run the commands
 
-  echo "";
-  echo "";
-  echo "*****************************************************" ;
-  echo "UPDATING: " ${dir} " in " `pwd` ;
-  echo "*****************************************************" ;
-  echo "";
-  echo "";
+		for dir in ${DIRECTORIES[@]} ; do
 
-  wp theme update --all;
-  wp plugin update --all;
-  wp theme list;
-  wp plugin list;
-  wp core update;
-  wp checksum core;
-  wp db check;
+		  cd ${dir}/public_html;
 
-  echo '';
-  echo '';
-  echo "*****************************************************" ;
-  echo "UPDATE for ${dir} COMPLETE!" ;
-  echo "*****************************************************" ;
-  echo '';
-  echo '';
+		  echo "";
+		  echo "";
+		  echo "*****************************************************" ;
+		  echo "UPDATING: " ${dir} " in " `pwd` ;
+		  echo "*****************************************************" ;
+		  echo "";
+		  echo "";
 
-  cd ../.. ;
-done
+		  wp theme update --all;
+		  wp plugin update --all;
+		  wp theme list;
+		  wp plugin list;
+		  wp core update;
+		  wp checksum core;
+		  wp db check;
+
+		  echo '';
+		  echo '';
+		  echo "*****************************************************" ;
+		  echo "UPDATE for ${dir} COMPLETE!" ;
+		  echo "*****************************************************" ;
+		  echo '';
+		  echo '';
+
+		  cd ../.. ;
+		done
+
+	fi
