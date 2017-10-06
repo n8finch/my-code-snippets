@@ -1,0 +1,25 @@
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.env.example
+!.gitignore
+!.htaccess
+!wp-content/
+!phploy.ini
+!.gitlab-ci.yml
+!README.md
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+wp-content/themes/*
+!wp-content/themes/theme-name
+!wp-content/themes/child-theme-name
+
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out example for a hint on how to do this.)
+wp-content/plugins/*
