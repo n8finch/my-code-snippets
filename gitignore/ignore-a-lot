@@ -7,12 +7,17 @@
 !phploy.ini
 !.gitlab-ci.yml
 !README.md
+DS_store
+node_modules
+
 
 # Ignore everything in the "wp-content" directory, except the "plugins"
 # and "themes" directories.
 wp-content/*
+!wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
+
 
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
