@@ -1,0 +1,37 @@
+//https://codepen.io/tutsplus/pen/xGggLa?editors=1100
+
+section#wrapper {
+	position: relative;
+	width: 100%;
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	& > div {
+		float: left;
+	}
+
+	div#sidebar {
+		padding: 20px;
+		width: 200px;
+		background-color: #434A54;
+		color: #fff;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 190px;
+	}
+
+	div#content {
+		padding: 0 15px;
+		width: calc( 100% - 200px );
+	}
+
+}
