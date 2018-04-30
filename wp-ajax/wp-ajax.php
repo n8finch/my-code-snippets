@@ -3,8 +3,7 @@
 //1.First, localize the admin_ajax url
 function n8finch_add_localized_script() {
 	//Attach to jQuery script, or other handle
-	wp_localize_script( 'jquery', 'ajax_object',
-            array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+	wp_localize_script( 'jquery', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 }
 add_action( 'wp_enqueue_scripts', 'n8finch_add_localized_script' );
 
